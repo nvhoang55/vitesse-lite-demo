@@ -8,6 +8,7 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { presetAttributify, presetIcons, presetUno } from 'unocss'
 import Unocss from 'unocss/vite'
+import { quasar, transformAssetUrls } from '@quasar/vite-plugin'
 
 export default defineConfig({
   resolve: {
@@ -16,7 +17,13 @@ export default defineConfig({
     },
   },
   plugins: [
-    Vue(),
+    Vue({
+      template: { transformAssetUrls },
+    }),
+
+    quasar({
+      sassVariables: 'src/quasar-variables.sass',
+    }),
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages(),
