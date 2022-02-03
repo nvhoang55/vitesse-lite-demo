@@ -9,7 +9,7 @@ const go = () => {
 </script>
 
 <template>
-  <div>
+  <div flex flex-col justify-center items-center>
     <div i-carbon-campsite text-4xl inline-block />
     <p>
       <a rel="noreferrer" href="https://github.com/antfu/vitesse-lite" target="_blank">

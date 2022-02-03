@@ -4,7 +4,7 @@ const router = useRouter()
 </script>
 
 <template>
-  <div>
+  <div flex flex-col justify-center items-center>
     <div i-carbon-pedestrian text-4xl inline-block />
     <p>
       Hi, {{ props.name }}
